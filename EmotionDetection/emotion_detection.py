@@ -27,7 +27,7 @@ def emotion_detector(text_to_analyse):
             'sadness': sadness_score,
         }
         data['dominant_emotion'] = max(data, key=data.get)
-    else:
+    else if response.status_code == 400:
         data =  {
             'anger': None,
             'disgust': None,
